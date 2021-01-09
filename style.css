@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 18px; }
+  body.lock {
+    overflow: hidden; }
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; }
+
+.share_btn {
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding: 12px 32px;
+  background-color: #5f27cd;
+  cursor: pointer;
+  margin: 20px;
+  transition: .4s;
+  font-weight: bold;
+  border: 2px solid #5f27cd;
+  color: #fff;
+  outline: none;
+  border-radius: 5px; }
+  .share_btn:hover {
+    background-color: transparent;
+    color: #000; }
+
+.modal .modal_overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  visibility: hidden; }
+  .modal .modal_overlay_visible {
+    opacity: 1;
+    visibility: visible;
+    transition: all .4s ease-in-out; }
+  .modal .modal_overlay .modal_window {
+    width: 700px;
+    height: 450px;
+    background-color: #fff;
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    position: relative;
+    text-align: center;
+    display: none; }
+    .modal .modal_overlay .modal_window_visible {
+      display: flex; }
+    .modal .modal_overlay .modal_window i.fa-times {
+      opacity: .8;
+      font-size: 24px;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer; }
+    .modal .modal_overlay .modal_window h2 {
+      font-size: 32px; }
+    .modal .modal_overlay .modal_window p {
+      max-width: 390px;
+      margin-top: 15px; }
+    .modal .modal_overlay .modal_window .social_share {
+      margin: 50px 0; }
+      .modal .modal_overlay .modal_window .social_share a {
+        padding: 8px 20px;
+        border-radius: 5px;
+        color: #fff;
+        text-decoration: none;
+        margin-left: 10px; }
+        .modal .modal_overlay .modal_window .social_share a i {
+          margin-right: 10px; }
+        .modal .modal_overlay .modal_window .social_share a.facebook_btn {
+          background-color: #405896;
+          transition: .4s; }
+          .modal .modal_overlay .modal_window .social_share a.facebook_btn:hover {
+            background-color: #314372; }
+        .modal .modal_overlay .modal_window .social_share a.twitter_btn {
+          background-color: #1da1f2;
+          transition: .4s; }
+          .modal .modal_overlay .modal_window .social_share a.twitter_btn:hover {
+            background-color: #0c85d0; }
+        .modal .modal_overlay .modal_window .social_share a.reddit_btn {
+          background-color: #000;
+          transition: .4s; }
+          .modal .modal_overlay .modal_window .social_share a.reddit_btn:hover {
+            background-color: #1a1a1a; }
+    .modal .modal_overlay .modal_window h4 {
+      font-size: 24px;
+      letter-spacing: 2px; }
+      .modal .modal_overlay .modal_window h4 span {
+        font-weight: normal;
+        letter-spacing: 0px;
+        margin-left: 10px; }
